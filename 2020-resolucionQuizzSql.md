@@ -31,14 +31,16 @@
    | order by                                   |        0.25 |
    
    ```mysql
-   select inst.cod_insti, inst.nombre_insti, tp.cod_tipo, tp.descripcion, prod.nro_lote, prod.cantidad_ml
-      from producto prod
-      inner join institucion inst
-        on inst.cod_insti=prod.cod_insti
-      inner join tipo_producto tp
-        on prod.cod_tipo=tp.cod_tipo
-      where prod.fecha_entrega > addate(now(), interval -6 month)
-      order by inst.nombre_insti, tp.descripcion, prod.fecha_entrega, prod.hora_entrega;
+   select inst.cod_insti, inst.nombre_insti
+     , tp.cod_tipo, tp.descripcion
+     , prod.nro_lote, prod.cantidad_ml
+   from producto prod
+   inner join institucion inst
+     on inst.cod_insti=prod.cod_insti
+   inner join tipo_producto tp
+     on prod.cod_tipo=tp.cod_tipo
+   where prod.fecha_entrega > addate(now(), interval -6 month)
+   order by inst.nombre_insti, tp.descripcion, prod.fecha_entrega, prod.hora_entrega;
    ```
    
    
