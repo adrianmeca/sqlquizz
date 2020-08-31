@@ -6,11 +6,11 @@
 
 **Comisión**: 305
 
+**Link**: https://github.com/adrianmeca/sqlquizz/blob/master/2020-resolucionQuizzSql.md
+
 ## Alcance
 
 [TOC]
-
-
 
 ## Modelo: Banco de Sangre
 
