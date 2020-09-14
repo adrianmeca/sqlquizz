@@ -1,5 +1,9 @@
 # Enunciado: Banco de Sangre
 
+## Enunciado
+
+El enunciado pueden encontrarlo en este link: [enunciado](./2020-EnunciadoBancoSangre.pdf)
+
 ## DER
 
 ![DER Banco de Sangre](../img/2020-DERBancoSangre.png)
