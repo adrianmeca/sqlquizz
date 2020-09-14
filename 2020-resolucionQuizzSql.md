@@ -16,6 +16,10 @@
 
 ![DER Banco de Sangre](./img/2020-DERBancoSangre.png)
 
+## Pasaje a Tabla
+
+El pasaje a tabla pueden encontrarlo en este [link](./pasajeTabla/2020-PTBancoSangre.md)
+
 ## SELECT & JOIN
 
 **Temas**: SELECT - WHERE - ORDER BY - INNER JOIN - LEFT JOIN
