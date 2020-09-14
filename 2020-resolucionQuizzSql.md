@@ -154,7 +154,7 @@ El pasaje a tabla pueden encontrarlo en este [link](./pasajeTabla/2020-PTBancoSa
    ```mysql
    select tp.cod_tipo, tp.descripcion,
      coalesce(sum(prod.cantidad_ml),0) total_ml,
-     count(distinct p.cod_insti) inst_distintas
+     count(distinct prod.cod_insti) inst_distintas
    from tipo_producto tp
    left join producto prod
      on tp.cod_tipo=prod.cod_tipo
@@ -167,22 +167,22 @@ El pasaje a tabla pueden encontrarlo en este [link](./pasajeTabla/2020-PTBancoSa
 2. Indicar los profesional con menos de 2 extracciones descartadas este año. Listar la matricula, nombre, apellido, la cantidad de extracciones y la cantidad de extracciones descartadas (tienen motivo de descarte). Ordenar por cantidad de extracciones descartadas descendente. Si no tienen extracciones descartadas listarlos con cantidad 0.
 
    #### Resolucion
-
-| dificultad                       | importancia |
-| :------------------------------- | ----------: |
-| group by                         |        0.30 |
-| having y where según corresponde |        0.40 |
-| left + count(artib) x2           |        0.20 |
-| order by                         |        0.10 |
-
-```mysql
-select pro.matricula, pro.nomb_ape
-  count(ext.matricula) cant_extrac, count(ext.motivo_descarte) cant_descarte
-from profesionales pro
-left join extraccion ext
-  on pro.matricula=ext.matricula
-where ext.fecha_extrac between '20200101' and '20201231'
-group by pro.matricula, pro.nomb_ape
-having cant_descarte < 2
-order by cant_descarte desc
-```
+   
+   | dificultad                       | importancia |
+   | :------------------------------- | ----------: |
+   | group by                         |        0.30 |
+   | having y where según corresponde |        0.40 |
+   | left + count(artib) x2           |        0.20 |
+   | order by                         |        0.10 |
+   
+   ```mysql
+   select pro.matricula, pro.nomb_ape
+     count(ext.matricula) cant_extrac, count(ext.motivo_descarte) cant_descarte
+   from profesionales pro
+   left join extraccion ext
+     on pro.matricula=ext.matricula
+   where ext.fecha_extrac between '20200101' and '20201231'
+   group by pro.matricula, pro.nomb_ape
+   having cant_descarte < 2
+   order by cant_descarte desc
+   ```
