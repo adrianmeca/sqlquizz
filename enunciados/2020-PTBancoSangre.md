@@ -92,7 +92,7 @@ CP(**cod_tipo, nro_lote**)
 <br />
 <br />
 
-**CONTROL**(<ins>*id_donante, fecha_extrac*, *cod_proceso*, *cod_herramienta*, fecha_control, hora_control</ins>, resultado_control)
+**CONTROL**(<ins>*id_donante, fecha_extrac*, *cod_proceso*, *cod_herramienta*,</ins> fecha_control, hora_control, resultado_control)
 
 CP(**id_donante, fecha_extrac, cod_proceso, cod_herramienta**) Ver [CPs](#CPs)
 
