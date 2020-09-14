@@ -1,4 +1,4 @@
-# Pasaje a Tabla: Banco de Sangre
+# Enunciado: Banco de Sangre
 
 ## DER
 

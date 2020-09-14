@@ -16,9 +16,15 @@
 
 ![DER Banco de Sangre](./img/2020-DERBancoSangre.png)
 
-## Pasaje a Tabla
+## Enunciado y Resolución
 
-El pasaje a tabla pueden encontrarlo en este [link](./pasajeTabla/2020-PTBancoSangre.md)
+### Enunciado
+
+El enunciado pueden encontrarlo en este link: [enunciado](./enunciados/2020-EnunciadoBancoSangre.pdf)
+
+### Pasaje a Tabla
+
+El pasaje a tabla pueden encontrarlo en este link: [pasaje a tabla](./enunciados/2020-PTBancoSangre.md)
 
 ## SELECT & JOIN
 
