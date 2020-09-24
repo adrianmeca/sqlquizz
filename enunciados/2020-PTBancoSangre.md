@@ -59,7 +59,7 @@ CP(**matricula**)
 <br />
 <br />
 
-**ESTADO**(<ins>*id_donante*, fecha, hora</ins>, *cod_estado*, observaciones)
+**ESTADO_DONANTE**(<ins>*id_donante*, fecha, hora</ins>, *cod_estado*, observaciones)
 
 CP(**id_donante, fecha, hora**)
 
@@ -81,13 +81,15 @@ CP(**id_donante, fecha_extrac**) Ver [CPs](#CPs)
 <br />
 <br />
 
-**PRODUCTO**(<ins>*cod_tipo*, nro_lote</ins>, cantidad_ml, fecha_entrega, hora_entrega, *cod_insti*)
+**PRODUCTO**(<ins>*cod_tipo*, nro_lote</ins>, cantidad_ml, fecha_entrega, hora_entrega, *cod_insti*, *id_donante, fecha_extrac*)
 
 CP(**cod_tipo, nro_lote**)
 
 *cod_tipo* --> **CF(TIPO_PRODUCTO)** NN
 
 *cod_insti* --> **CF(INSTITUCION)** NULL
+
+*id_donante, fecha_extrac* --> **CF(EXTRACCION)** NN
 
 <br />
 <br />
@@ -110,4 +112,4 @@ CP(**id_donante, fecha_extrac, cod_proceso, cod_herramienta**) Ver [CPs](#CPs)
 ### CPs
 
 * Para la CP de extracción también se acepta incluir la hora de extracción en especial para quienes usaron atributo datetime.
-* Para la CP de control se utiliza la misma CF de extracción que debe ser igual a la CP
+* Para la CP de control se utiliza la misma CF de extracción que debe ser igual a la CP de extraccion
